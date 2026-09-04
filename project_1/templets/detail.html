@@ -1,0 +1,18 @@
+<div style="max-width: 800px; margin: 0 auto; font-family: sans-serif; padding: 20px;">
+    
+    <h1>{{ object.title }}</h1>
+    
+    {% if object.img %}
+        <img src="{{ object.img.url }}" style="width: 80%; max-height: 250px; object-fit: cover; border-radius: 5px; margin-bottom: 20px;">
+    {% endif %}
+
+    <p style="font-size: 16px; line-height: 1.5;">{{ object.body }}</p>
+
+    <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+        <a href="{% url 'update' object.pk %}" style="color: orange; text-decoration: none; font-weight: bold; margin-right: 15px;">Tahrirlash</a>
+        
+        <a href="{% url 'delete' object.pk %}" style="color: red; text-decoration: none; margin-right: 15px;">O'chirish</a>
+        
+        <a href="{% url 'new' %}" style="color: #666; text-decoration: none;">Orqaga</a>
+    </div>
+</div>

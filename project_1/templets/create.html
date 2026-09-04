@@ -1,0 +1,18 @@
+<div style="max-width: 400px; margin: 20px auto; font-family: sans-serif;">
+    <h3>Yangilik qo'shish</h3>
+    
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        
+        <style>
+            input, textarea { width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+            button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+            .back { color: #666; text-decoration: none; margin-left: 10px; font-size: 14px; }
+        </style>
+
+        {{ form.as_p }}
+
+        <button type="submit">Saqlash</button>
+        <a href="{% url 'new' %}" class="back">Orqaga</a>
+    </form>
+</div>
