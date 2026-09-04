@@ -1,0 +1,2 @@
+# sayt
+bu yangilikalr sayti
